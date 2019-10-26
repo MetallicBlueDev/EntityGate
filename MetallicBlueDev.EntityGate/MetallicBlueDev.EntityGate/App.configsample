@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+
+  <configSections>
+    <section name="EntityGateConfigs" type="MetallicBlueDev.EntityGate.Configuration.EntityGateSectionHandler, MetallicBlueDev.EntityGate" />
+  </configSections>
+
+  <connectionStrings>
+    <add name="SampleDbInstance" connectionString="DATABASE=MyDbName;SERVER=my-db-host;Integrated Security=False;USER ID=MyUserName;PASSWORD=MyPassword;" providerName="System.Data.SqlClient" />
+    <add name="OtherDbInstance" connectionString="DATABASE=OtherDbName;SERVER=other-db-host;Integrated Security=False;USER ID=OtherUserName;PASSWORD=OtherPassword;" providerName="System.Data.SqlClient" />
+    <add name="DbInstance1" connectionString="DATABASE=OtherDbName;SERVER=other-db-host;Integrated Security=False;USER ID=OtherUserName;PASSWORD=OtherPassword;" providerName="System.Data.SqlClient" />
+    <add name="DbInstance2" connectionString="DATABASE=OtherDbName;SERVER=other-db-host;Integrated Security=False;USER ID=OtherUserName;PASSWORD=OtherPassword;" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+
+  <EntityGateConfigs>
+    <EntityGateConfig>
+      <ConnectionName>SampleDbInstance</ConnectionName>
+      <MaximumNumberOfAttempts>5</MaximumNumberOfAttempts>
+      <AttemptDelay>1000</AttemptDelay>
+      <Timeout>30</Timeout>
+    </EntityGateConfig>
+    <EntityGateConfig>
+      <ConnectionName>OtherDbInstance</ConnectionName>
+      <MaximumNumberOfAttempts>3</MaximumNumberOfAttempts>
+      <AttemptDelay>900</AttemptDelay>
+      <Timeout>40</Timeout>
+    </EntityGateConfig>
+    <EntityGateConfig>
+      <ConnectionName>DbInstance1</ConnectionName>
+      <LazyLoading>False</LazyLoading>
+    </EntityGateConfig>
+    <EntityGateConfig>
+      <ConnectionName>DbInstance2</ConnectionName>
+      <Timeout>1000</Timeout>
+    </EntityGateConfig>
+  </EntityGateConfigs>
+  
+</configuration>
