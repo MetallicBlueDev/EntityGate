@@ -84,9 +84,6 @@
     <Compile Include="Core\EntityStateTracking.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.configsample" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="EntityFramework">
       <Version>6.3.0</Version>
     </PackageReference>
