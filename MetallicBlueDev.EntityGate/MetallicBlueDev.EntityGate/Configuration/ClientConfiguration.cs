@@ -104,7 +104,7 @@ namespace MetallicBlueDev.EntityGate.Configuration
         ///
         /// If the main entity implements the <see cref="InterfacedObject.IEntityObjectArchival"/> interface, the backup is automatically enabled.
         /// </summary>
-        public bool AutomaticCheckOfOriginValues { get; set; }
+        public bool AutomaticCheckOfOriginalValues { get; set; }
 
         /// <summary>
         /// Log internal messages. Include messages from Entity Framework.
@@ -143,10 +143,7 @@ namespace MetallicBlueDev.EntityGate.Configuration
 
             if (currentConfig != null)
             {
-                MaximumNumberOfAttempts = currentConfig.MaximumNumberOfAttempts;
-                AttemptDelay = currentConfig.AttemptDelay;
-                LazyLoading = currentConfig.LazyLoading;
-                ConnectionString = EntityGateConfigLoader.GetConnectionString(currentConfig.ConnectionName);
+                CopyConfiguration(currentConfig);
 
                 if (CanUseLogging)
                 {
@@ -203,6 +200,21 @@ namespace MetallicBlueDev.EntityGate.Configuration
                     Log(Resources.ConfigurationIsUpToDate);
                 }
             }
+        }
+
+        /// <summary>
+        /// Copy of the configuration.
+        /// </summary>
+        /// <param name="config"></param>
+        private void CopyConfiguration(EntityGateConfig config)
+        {
+            ConnectionString = EntityGateConfigLoader.GetConnectionString(config.ConnectionName);
+
+            MaximumNumberOfAttempts = config.MaximumNumberOfAttempts;
+            AttemptDelay = config.AttemptDelay;
+            LazyLoading = config.LazyLoading;
+            Timeout = config.Timeout;
+            AutomaticCheckOfOriginalValues = config.AutomaticCheckOfOriginalValues;
         }
 
         /// <summary>

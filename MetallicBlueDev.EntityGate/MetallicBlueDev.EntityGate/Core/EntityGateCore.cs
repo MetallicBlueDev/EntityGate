@@ -1132,7 +1132,7 @@ namespace MetallicBlueDev.EntityGate.Core
         /// </summary>
         private void CheckEntityForAutoSaveOriginalValues()
         {
-            if (Configuration.AutomaticCheckOfOriginValues)
+            if (Configuration.AutomaticCheckOfOriginalValues)
             {
                 var oldState = Token.SaveOriginalValues;
                 var newState = entity.IsEntityArchival();

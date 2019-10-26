@@ -19,35 +19,6 @@ __If one or more scenarios answer your request, this library might interest you.
 
 # Example
 
-```
-// Creation of a new entity.
-SampleEntity1 sample1 = new SampleEntity1();
-sample1.Value = 3;
-
-// EntityGate support and database registration.
-EntityGateObject<> gate = new EntityGateObject<SampleEntity1>(sample1);
-
-if (gate.Save()) {
-  // New data saved in database.
-}
-
-// Creation of a new entity.
-gate.NewEntity();
-gate.Value = 4;
-gate.Save();
-
-// Loading the primary key "10" and obtaining the entity.
-gate.Load(identifier=10);
-sample1 = gate.Entity;
-
-// Support for another entity.
-EntityGateObject<> gate = new EntityGateObject<OtherEntity>(sample1);
-
-// Loading the primary key "33"...
-if (gate.Load(33)) {
-  // ...and obtaining the entity.
-  OtherEntity sample2 = gate.Entity;
-}
-```
-
-More example to come.
+* [Example of a configuration file](MetallicBlueDev.EntityGate/MetallicBlueDev.Sample.EntityGate/App.config)
+* [Example of simple use.](MetallicBlueDev.EntityGate/MetallicBlueDev.Sample.EntityGate/BasicSample.cs)
+* [Example of implementation on entities.](MetallicBlueDev.EntityGate/MetallicBlueDev.Sample.Data/SampleEntity1.Interface.cs)

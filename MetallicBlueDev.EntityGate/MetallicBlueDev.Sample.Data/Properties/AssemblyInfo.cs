@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MetallicBlueDev.EntityGate")]
-[assembly: AssemblyDescription("EntityGate")]
+[assembly: AssemblyTitle("MetallicBlueDev.Sample.Data")]
+[assembly: AssemblyDescription("Sample.Data")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MetallicBlueDev")]
-[assembly: AssemblyProduct("MetallicBlueDev.EntityGate")]
+[assembly: AssemblyProduct("MetallicBlueDev.Sample.Data")]
 [assembly: AssemblyCopyright("MetallicBlueDev")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1898d29f-7fe8-4c29-a6ff-57860703d4d0")]
+[assembly: Guid("52f9655c-6895-4fbc-b3d2-f50ea9cc5356")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -34,6 +34,6 @@
         /// <summary>
         /// Determines if the backup of the original values is performed automatically.
         /// </summary>
-        internal bool AutomaticCheckOfOriginValues { get; set; } = true;
+        internal bool AutomaticCheckOfOriginalValues { get; set; } = true;
     }
 }
