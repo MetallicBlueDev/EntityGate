@@ -1,7 +1,7 @@
 # EntityGate
 EntityGate is an open source .NET library to easily use Entity Framework in your applications.
 
-This microframework allows you to use objects managed by Entity Framework without worrying about the context.
+This micro-framework allows you to use objects managed by Entity Framework without worrying about the context.
 
 # Is EntityGate for me?
 Although EntityGate can be used by all, it exists specifically to offer additional scenarios to the Entity Framework.
@@ -25,7 +25,7 @@ SampleEntity1 sample1 = new SampleEntity1();
 sample1.Value = 3;
 
 // EntityGate support and database registration.
-EntityGate<> gate = new EntityGate<SampleEntity1>(sample1);
+EntityGateObject<> gate = new EntityGateObject<SampleEntity1>(sample1);
 
 if (gate.Save()) {
   // New data saved in database.
@@ -37,11 +37,11 @@ gate.Value = 4;
 gate.Save();
 
 // Loading the primary key "10" and obtaining the entity.
-gate.Load(pKeyValue=10);
+gate.Load(identifier=10);
 sample1 = gate.Entity;
 
 // Support for another entity.
-EntityGate<> gate = new EntityGate<OtherEntity>(sample1);
+EntityGateObject<> gate = new EntityGateObject<OtherEntity>(sample1);
 
 // Loading the primary key "33"...
 if (gate.Load(33)) {

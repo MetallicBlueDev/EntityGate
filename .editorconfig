@@ -170,6 +170,10 @@ csharp_preserve_single_line_statements = true
 csharp_preserve_single_line_blocks = true
 
 ## Naming conventions
+
+# IDE0051: Remove unused private members
+dotnet_diagnostic.IDE0051.severity = warning
+
 [*.{cs,vb}]
 
 ## Naming styles
