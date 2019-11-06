@@ -3,6 +3,8 @@ EntityGate is an open source .NET library to easily use Entity Framework in your
 
 This micro-framework allows you to use objects managed by Entity Framework without worrying about the context.
 
+## For EntityFrameworkCore see [EntityGateCore](https://github.com/MetallicBlueDev/EntityGateCore)
+
 # Is EntityGate for me?
 Although EntityGate can be used by all, it exists specifically to offer additional scenarios to the Entity Framework.
 
